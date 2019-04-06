@@ -1,0 +1,10 @@
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/crud/CreateLivroHandler.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/Response.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/crud/GetLivroHandler.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/dao/LivroDAO.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/dao/DynamoDbAdapter.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/crud/ListLivroHandler.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/model/Livro.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/crud/DeleteLivroHandler.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/ApiGatewayResponse.java
+/home/diogenes/TCC/Arquivo Comprimido/serverless-tcc/dist/serverless/ecom/src/main/java/br/com/ufpb/dcx/si/crud/UpdateLivroHandler.java

@@ -1,0 +1,105 @@
+# Welcome to Serverless!
+# Happy Coding!
+
+service: ecom-api
+
+custom:
+    
+  ecomLivroTableName: 'java-ecom-livro-${self:provider.stage}'
+  
+  
+
+provider:
+  name: aws
+  runtime: java8
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region, 'us-east-1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+
+        - { "Fn::GetAtt": ["LivroDynamoDBTable", "Arn" ] }
+        
+        
+  environment:
+        
+    ECOM_LIVRO_TABLE_NAME: ${self:custom.ecomLivroTableName}
+    
+    
+    
+package:
+  artifact: 'target/${self:service}-${self:provider.stage}.jar'
+
+functions:
+
+
+  listLivro:
+      handler: br.com.ufpb.dcx.si.crud.ListLivroHandler
+      events:
+         - http:
+            path: /livro
+            method: get
+
+
+  cadastrarLivro:
+      handler: br.com.ufpb.dcx.si.crud.CadastrarLivroHandler
+      events:
+         - http:
+            path: /livro
+            method: post
+   
+   
+  editarLivro:
+      handler: br.com.ufpb.dcx.si.crud.EditarLivroHandler
+      events:
+         - http:
+            path: /livro/{id}
+            method: put
+      
+  deletarLivro:
+      handler: br.com.ufpb.dcx.si.crud.DeletarLivroHandler
+      events:
+         - http:
+            path: /livro/{id}
+            method: delete
+            
+  getLivro:
+      handler: br.com.ufpb.dcx.si.crud.GetLivroHandler
+      events:
+         - http:
+            path: /livro/{id}
+            method: get
+
+
+
+
+resources:
+  Resources:
+    LivroDynamoDBTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.ecomLivroTableName}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+          - AttributeName: title
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+          - AttributeName: title
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+    
+
+
+    

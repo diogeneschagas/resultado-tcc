@@ -1,0 +1,11 @@
+br/com/ufpb/dcx/si/crud/CreateLivroHandler.class
+br/com/ufpb/dcx/si/crud/ListLivroHandler.class
+br/com/ufpb/dcx/si/ApiGatewayResponse.class
+br/com/ufpb/dcx/si/dao/LivroDAO.class
+br/com/ufpb/dcx/si/model/Livro.class
+br/com/ufpb/dcx/si/crud/GetLivroHandler.class
+br/com/ufpb/dcx/si/crud/DeleteLivroHandler.class
+br/com/ufpb/dcx/si/dao/DynamoDBAdapter.class
+br/com/ufpb/dcx/si/Response.class
+br/com/ufpb/dcx/si/ApiGatewayResponse$Builder.class
+br/com/ufpb/dcx/si/crud/UpdateLivroHandler.class
