@@ -14,19 +14,19 @@ public class Livro{
 
     
 /**
-* Title.
+* Titulo.
 */
-    private String title;
+    private String titulo;
 
 /**
-* Author.
+* Autor.
 */
-    private String author;
+    private String autor;
 
 /**
-* Edition.
+* Edicao.
 */
-    private Integer edition;
+    private Integer edicao;
 
 
     public Livro(){
@@ -45,57 +45,57 @@ public class Livro{
     }
 
         /**
-    * Gets the title.
+    * Gets the titulo.
     *
-    * @return title.
+    * @return titulo.
     */
-    @DynamoDBAttribute(attributeName = "title")
-    public String getTitle() {
-        return title;
+    @DynamoDBAttribute(attributeName = "titulo")
+    public String getTitulo() {
+        return titulo;
     }
     /**
-    * Gets the author.
+    * Gets the autor.
     *
-    * @return author.
+    * @return autor.
     */
-    @DynamoDBAttribute(attributeName = "author")
-    public String getAuthor() {
-        return author;
+    @DynamoDBAttribute(attributeName = "autor")
+    public String getAutor() {
+        return autor;
     }
     /**
-    * Gets the edition.
+    * Gets the edicao.
     *
-    * @return edition.
+    * @return edicao.
     */
-    @DynamoDBAttribute(attributeName = "edition")
-    public Integer getEdition() {
-        return edition;
+    @DynamoDBAttribute(attributeName = "edicao")
+    public Integer getEdicao() {
+        return edicao;
     }
 
     
         /**
-    * Sets the title.
+    * Sets the titulo.
     *
-    * @param name title.
+    * @param name titulo.
     */
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
     /**
-    * Sets the author.
+    * Sets the autor.
     *
-    * @param name author.
+    * @param name autor.
     */
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
     /**
-    * Sets the edition.
+    * Sets the edicao.
     *
-    * @param name edition.
+    * @param name edicao.
     */
-    public void setEdition(Integer edition) {
-        this.edition = edition;
+    public void setEdicao(Integer edicao) {
+        this.edicao = edicao;
     }
 
 
